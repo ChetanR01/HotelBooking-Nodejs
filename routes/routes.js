@@ -12,9 +12,12 @@ const UserController = require('../controllers/User.controller')
 router.use(bodyParser.json());
 
 // Create User 
-router.post("/signup", UserController.createUser)
+router.post("/send-otp", UserController.sendEmailOTP);
+router.post("/verify-otp", UserController.verifyEmail);
+
+router.post("/signup", UserController.createUser);
     // Create User 
-router.post("/login", UserController.userLogin)
+router.post("/login", UserController.userLogin);
 
 
 

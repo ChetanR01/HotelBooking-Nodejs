@@ -7,17 +7,12 @@ module.exports = (sequelize, DataTypes) => {
       },
       mobile_no: {
         type:DataTypes.STRING(10),
-        unique: true,
-        allowNull: false,
+        unique: true
       },
       email: {
         type: DataTypes.STRING,
-        unique: true
-      },
-      email_otp:DataTypes.STRING(10),
-      email_status: {
-        type: DataTypes.ENUM("Verified","Pending"),
-        defaultValue: "Pending"
+        unique: true,
+        allowNull: false
       },
       password: {
         type: DataTypes.STRING,
